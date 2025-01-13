@@ -1,66 +1,22 @@
-## Foundry
+# Smart-Contracts_Upgrade
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+## Overview
+This project demonstrates the upgrade functionality of smart contracts from CircleV1 to CircleV2 using Universal Upgradeable Proxies implemented with OpenZeppelin’s `ERC1967` standard.
 
-Foundry consists of:
+The primary purpose of this project is to showcase how to manage and implement upgrades seamlessly while maintaining proxy-based access to contract functionality.
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## Key Features
+1. **Universal Upgradeable Proxies:** Utilizes OpenZeppelin's `ERC1967` implementation for smooth upgrades.
+2. **CircleV1 and CircleV2 Compatibility:** CircleV1 returns version 1, while CircleV2 introduces version 2 functionality, ensuring a straightforward demonstration of upgrades.
 
-## Documentation
+## Tools and Frameworks
+- **Foundry:** A blazing fast, portable, and modular toolkit for Ethereum application development.
+- **DevOpsTools:** For automating deployment and testing processes.
 
-https://book.getfoundry.sh/
+## Testing and Deployment
+- The project leverages Foundry for testing the upgrade process and ensuring the proxy points to the correct logic contract.
+- Users can utilize the provided `Makefile` for seamless interaction and execution of tasks.
 
-## Usage
+## Acknowledgments
+Special thanks to [Cyfrin’s Foundry Full Course](https://github.com/Cyfrin/foundry-full-course-cu) for providing invaluable educational resources and insights into smart contract development and upgrade mechanisms.
 
-### Build
-
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
